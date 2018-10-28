@@ -23,7 +23,7 @@ void loop(double* array,  long N, long R, double pi, double x, double t)
     curand_init((unsigned long long)clock(), index, 1, &state); // ** Set offset = 1
     double dx = 2.0/R;
     
-    int T = (int)(10*curand_uniform(&state))%4;
+    int T = (int)(1000*curand_uniform(&state))%4; // Not too diff, if the factor is 100, instead of 1000, however 10 gives high error %.
 
     // __syncthreads(); // Did not help
     while (x < (pi - (1.0/R))) {
@@ -35,7 +35,7 @@ void loop(double* array,  long N, long R, double pi, double x, double t)
         else if (T == 1)
             x = fabs(x - dx);
         t = t + 1;
-        T = (int)(10*curand_uniform(&state))%4;
+        T = (int)(1000*curand_uniform(&state))%4;
     }
     // __syncthreads(); // Did not help
     
