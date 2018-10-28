@@ -2,9 +2,9 @@
 
 - Transfer the code to CUDA
    * Issues:
-    - Code does not work for large 'R' (Max test-value of R = 700)
-    - Error % lies between 10% to 25%, which is too high, as compared to serial processing.
-    - Wait for fixes. These issues are linked to the implementation of the curand() functions.
+      - Code does not work for large 'R' (Max test-value of R = 700)
+      - Error % lies between 10% to 25%, which is too high, as compared to serial processing.
+      - Wait for fixes. These issues are linked to the implementation of the curand() functions.
     
 - Obtain a larger dataset.
 
